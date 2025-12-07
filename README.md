@@ -370,7 +370,7 @@ You may edit the device's "lock" and change its IP address and SSH password if n
 It's recommended to install a CGI script [kankun-json](https://github.com/homedash/kankun-json) that provides an API over HTTP(S).
 It also has a small Web UI so you can control the light from your browser.
 
-<img width="640" height="480" alt="kankun-json web panel" src="https://camo.githubusercontent.com/0cf92e335e876977a02581f038ab4eb15758aae70519e2596c5bcded105c1cb3/68747470733a2f2f636c6475702e636f6d2f49575549416a7232704a2d3132303078313230302e706e67" />
+![kankun-json web panel](https://camo.githubusercontent.com/0cf92e335e876977a02581f038ab4eb15758aae70519e2596c5bcded105c1cb3/68747470733a2f2f636c6475702e636f6d2f49575549416a7232704a2d3132303078313230302e706e67)
 
 * https://github.com/homedash/kankun-manager a full installer and configurer on Ansible.
 * [Change switch IP in the /www/switches.json when it changes](https://gist.github.com/ferstar/6ebad5e70e17a9f4c05dabed7bf79d7b)
