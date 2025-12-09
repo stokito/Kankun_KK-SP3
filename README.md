@@ -129,13 +129,13 @@ Password for root changed by root
 The default host name of the device is `koven`.
 Presumably if you have more than one of these, you may want to change the hostname so they're identifiable.
 ```sh
-uci set system.hostname='koven'
+uci set system.hostname='kankun'
 uci commit
 ```
 Or edit the config file directly with `vi /etc/sysconfig/system` this section:
-```yaml
+```
 config system
-    option hostname 'koven'
+    option hostname 'kankun'
 ```
 To exit the vim editor press `Esc` then type `wq!` and press `Enter`.
 
@@ -254,7 +254,7 @@ Toggle relay:
 case "`cat /sys/class/leds/tp-link:blue:relay/brightness`" in 0) echo 1 > /sys/class/leds/tp-link:blue:relay/brightness;; 1) echo 0 > /sys/class/leds/tp-link:blue:relay/brightness;; esac
 ````
 
-[!NOTE]
+> [!NOTE]
 > When the relay is changed using this method, the official app will not track that change.
 > As a result you'll need to press twice on the physical button on the device to get the output to toggle.
 > This is because the system and official app thinks that the output is already _ON_, so it turns it _OFF_, while it was already _OFF_.
@@ -326,7 +326,7 @@ uci set system.@led[1].default=0
 uci commit system
 ```
 Check with `cat /etc/config/system`:
-```yaml
+```
 config led
   option name 'Relay'
   option sysfs 'tp-link:blue:relay'
@@ -494,7 +494,8 @@ This should add the KanKun switch in OpenHAB.
 
 
 ### Using native protocol
-[!WARNING]
+
+> [!WARNING]
 > This is not recommended and may not work anymore.
 > Please let us know if this works and improve the instructions.
 
@@ -504,7 +505,8 @@ You may try to control a Kankun Plug using the stock protocol, no hacks.
 
 
 ## Flashing to OpenWrt firmware
-[!WARNING]
+
+> [!WARNING]
 > Unless you really need it don't do this.
 
 The original firmware is very outdated, and the Dropbear SSH server on it has some security vulnerability.
@@ -533,6 +535,7 @@ If the device has its wireless interface disabled, i.e., unreachable,
 you will have to open the case and solder cables to the serial headers on the pcb to fix it.
 
 See also:
+* [kankun-firmware](https://github.com/andrewc12/kankun-firmware)
 * [buildenv and quilt_rev10.txt](https://gist.github.com/andrewc12/21f92b64feaa0ce0763ea0b5439448a8) Build firmware for Kankun small k (KK-SP3) **EXPERIMENTAL!**
 * [Patch to enable the device support](https://gist.github.com/andrewc12/cb1ce8804629a2c6ce10a2b62bc4842a).
 
